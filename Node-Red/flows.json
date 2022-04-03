@@ -1,0 +1,999 @@
+[
+    {
+        "id": "e2bbed337ac342c7",
+        "type": "tab",
+        "label": "Mioty Sensor Data Decoder",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "81fdf1b92e52ea8e",
+        "type": "tab",
+        "label": "Mioty und LoRaWAN Logger",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cc84aa81bc8e7783",
+        "type": "tab",
+        "label": "Daten von Influx holen und auf Dashboard anzeigen Test",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "84947aef414dd231",
+        "type": "mqtt-broker",
+        "name": "Manjaro",
+        "broker": "172.17.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "26d9553546db0c42",
+        "type": "mqtt-broker",
+        "name": "TTN",
+        "broker": "eu1.cloud.thethings.network",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "202e3fcf26f9fade",
+        "type": "mqtt-broker",
+        "name": "WUP",
+        "broker": "wup",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d794118d.e18b6",
+        "type": "ui_group",
+        "name": "Galerie",
+        "tab": "d53f0f19.b748",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7e90f923.67e4a8",
+        "type": "ui_group",
+        "name": "Gastronomie",
+        "tab": "d53f0f19.b748",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c4d51601.439018",
+        "type": "ui_group",
+        "name": "Wellenbecken",
+        "tab": "d53f0f19.b748",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "43eb5014.16b91",
+        "type": "ui_group",
+        "name": "Thermalbereich",
+        "tab": "d53f0f19.b748",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a5561fd0.430dd",
+        "type": "ui_group",
+        "name": "Zuluftschacht",
+        "tab": "d53f0f19.b748",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ca47a21f.8746e",
+        "type": "ui_group",
+        "name": "Dach Erlebnisbad",
+        "tab": "d53f0f19.b748",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d53f0f19.b748",
+        "type": "ui_tab",
+        "name": "Raumluftdaten",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "15c052bddf149529",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "89749fb7.87f01",
+        "type": "ui_group",
+        "name": "Charts",
+        "tab": "d7901f40.2659d",
+        "order": 2,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "ab397e95.29ebe",
+        "type": "ui_group",
+        "name": "Inputs",
+        "tab": "d7901f40.2659d",
+        "order": 1,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "4e7edda4.417004",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "d7901f40.2659d",
+        "order": 3,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "d7901f40.2659d",
+        "type": "ui_tab",
+        "name": "Charts",
+        "icon": "dashboard",
+        "order": 2
+    },
+    {
+        "id": "b6055df9a47c5421",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "Birkenstab Influx",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "https://influx.birkenstab.de/",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "c3c013de0265cee6",
+        "type": "ui_tab",
+        "name": "Analyse",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "16313c985c402983",
+        "type": "ui_group",
+        "name": "Standard",
+        "tab": "c3c013de0265cee6",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "43afa04d3c81a153",
+        "type": "mqtt in",
+        "z": "e2bbed337ac342c7",
+        "name": "Mioty Gateway",
+        "topic": "data",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "84947aef414dd231",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "483ae197221ef01f"
+            ]
+        ]
+    },
+    {
+        "id": "b3e8a0db13e720fe",
+        "type": "debug",
+        "z": "e2bbed337ac342c7",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1590,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "483ae197221ef01f",
+        "type": "json",
+        "z": "e2bbed337ac342c7",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 580,
+        "y": 280,
+        "wires": [
+            [
+                "b0d41a75e62df6b4"
+            ]
+        ]
+    },
+    {
+        "id": "b0d41a75e62df6b4",
+        "type": "function",
+        "z": "e2bbed337ac342c7",
+        "name": "",
+        "func": "return {payload:msg.payload.data};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 280,
+        "wires": [
+            [
+                "4930051408585629"
+            ]
+        ]
+    },
+    {
+        "id": "4dc6ea0fdd3284f4",
+        "type": "inject",
+        "z": "e2bbed337ac342c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{     \"header\": {         \"gw\": \"M0007327E2191\",         \"ts\": \"2021-10-22T08:25:37Z\"     },     \"data\": [         {             \"uid\": \"M00124B001CAB4B9B000\",             \"ts\": \"2021-10-22T08:25:32Z\",             \"type\": \"MIOTY\",             \"rssi\": -25.8,             \"snr\": 22.7,             \"frame\": \"0109001D00351836\",             \"uuid\": \"2E400B1E1DDF852DA440198D131149A1\"         },         {             \"uid\": \"M00124B001CAB4B9B000\",             \"ts\": \"2021-10-22T08:25:36Z\",             \"type\": \"MIOTY\",             \"rssi\": -25.8,             \"snr\": 23.3,             \"frame\": \"0209FE0546029261\",             \"uuid\": \"E16EA6FF6EE01EFD41E795674D754B80\"         }     ] }",
+        "payloadType": "str",
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "483ae197221ef01f"
+            ]
+        ]
+    },
+    {
+        "id": "4930051408585629",
+        "type": "function",
+        "z": "e2bbed337ac342c7",
+        "name": "Mioty Sensor Decoder",
+        "func": "function decodeDevKit(frame) {\n    const data = Buffer.from(frame, \"hex\")\n    const frameId = data.readInt8(0)\n    \n    if (frameId === 0x1) {\n        return {\n            counter: data.readUint8(1),\n            lightSensor: data.readUint16BE(2),\n            magnetFlux: data.readInt16BE(4),\n            temperature: data.readInt8(6),\n            humidity: data.readInt8(7)\n        }\n    } else if (frameId === 0x2) {\n        return {\n            counter: data.readUint8(1),\n            accX: data.readInt8(2),\n            accY: data.readInt8(3),\n            accZ: data.readInt8(4),\n            batteryVoltage: data.readInt16BE(5),\n            batteryPercentage: data.readInt8(7)\n        }\n    } else {\n        return {\n            error: \"Unknown frameId \" + frameId\n        }\n    }\n    \n}\n\nfunction decodeLansen(frame) {\n    function getInt(data, mask, position) {\n        return data\n    }\n    const data = Buffer.from(frame, \"hex\")\n    return {\n        temp_1: (data.readUint8(0) >> 1 & 0x7f) / 2,\n        humidity_1: (data.readUint16BE(0) >> 2 & 0x7f),\n        co2_1: (data.readUint16BE(1) >> 2 & 0xff) * 20,\n        // Temp, humidity und co2 mit 2 und 3 dahinter, \n        // sind einfach nur die Werte der letzten beiden Mesunngen\n        temp_2: (data.readUint16BE(2) >> 3 & 0x7f) / 2,\n        humidity_2: (data.readUint16BE(3) >> 4 & 0x7f),\n        co2_2: (data.readUint16BE(4) >> 4 & 0xff) * 20,\n        temp_3: (data.readUint16BE(5) >> 5 & 0x7f) / 2,\n        humidity_3: (data.readUint16BE(6) >> 6 & 0x7f),\n        co2_3: (data.readUint16BE(7) >> 6 & 0xff) * 20,\n        batt: ((data.readUint8(8) >> 2 & 0xf) + 18) / 10,\n        co2_error: (data.readUint8(8) >> 6 & 1),\n        calibration_not_done: (data.readUint8(8) >> 7 & 1)\n    }\n    \n}\n\n\nfunction decode(message) {\n    if (message.uid === \"MA0412D2A0000046F000\") {\n        return decodeLansen(message.frame)\n    } else {\n        return decodeDevKit(message.frame)\n    }\n}\n\nlet decoded = {}\n\nfor (const message of msg.payload) {\n    decoded = {...decoded, ...decode(message) }\n}\nreturn { payload: decoded }",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 420,
+        "wires": [
+            [
+                "b3e8a0db13e720fe",
+                "53a56b7296226bb4"
+            ]
+        ]
+    },
+    {
+        "id": "28b56c2dfd786584",
+        "type": "mqtt out",
+        "z": "e2bbed337ac342c7",
+        "name": "",
+        "topic": "decoded",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "84947aef414dd231",
+        "x": 1760,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "53a56b7296226bb4",
+        "type": "json",
+        "z": "e2bbed337ac342c7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 1510,
+        "y": 500,
+        "wires": [
+            [
+                "28b56c2dfd786584"
+            ]
+        ]
+    },
+    {
+        "id": "680c71778738692c",
+        "type": "inject",
+        "z": "e2bbed337ac342c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"header\":{\"gw\":\"M0007327E2191\",\"ts\":\"2021-11-23T12:46:54Z\"},\"data\":[{\"uid\":\"MA0412D2A0000046F000\",\"ts\":\"2021-11-23T12:46:49Z\",\"type\":\"MIOTY\",\"rssi\":-20.4,\"snr\":18.1,\"frame\":\"4EC445331124CC4479\",\"uuid\":\"EE548E7958AFD1308B95E1E7CFAD23C8\"}]}",
+        "payloadType": "str",
+        "x": 250,
+        "y": 100,
+        "wires": [
+            [
+                "483ae197221ef01f"
+            ]
+        ]
+    },
+    {
+        "id": "721b642de83d742d",
+        "type": "file",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "filename": "/data/lorawan_log.csv",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "utf8",
+        "x": 1560,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f79d577ddf7b767",
+        "type": "mqtt in",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "topic": "v3/birkenstab-test-app@ttn/devices/eui-24e124136b104338/up",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "26d9553546db0c42",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 590,
+        "y": 640,
+        "wires": [
+            [
+                "44f8860b1574f832"
+            ]
+        ]
+    },
+    {
+        "id": "2fb68c6e53452e14",
+        "type": "debug",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1550,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "44f8860b1574f832",
+        "type": "json",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 1030,
+        "y": 620,
+        "wires": [
+            [
+                "00480e2d6646b6b1"
+            ]
+        ]
+    },
+    {
+        "id": "00480e2d6646b6b1",
+        "type": "function",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "func": "const payload = msg.payload\nconst gateway = payload.uplink_message.rx_metadata.find(x => x.gateway_ids.gateway_id === 'packetbroker' && x.packet_broker.forwarder_gateway_id === 'eui-b827ebfffe6df69f')\n\nreturn {\n    payload: [payload.received_at, gateway === undefined ? 'NOT_RECEIVED' : 'RECEIVED', payload.uplink_message.frm_payload, gateway?.rssi, gateway?.snr, JSON.stringify(payload)].join(';')\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 600,
+        "wires": [
+            [
+                "2fb68c6e53452e14",
+                "721b642de83d742d",
+                "8ebb93b83e459ee5"
+            ]
+        ]
+    },
+    {
+        "id": "c517564f8a7446d5",
+        "type": "inject",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"end_device_ids\":{\"device_id\":\"eui-24e124136b104338\",\"application_ids\":{\"application_id\":\"birkenstab-test-app\"},\"dev_eui\":\"24E124136B104338\",\"join_eui\":\"24E124C0002A0001\",\"dev_addr\":\"260B4E1E\"},\"correlation_ids\":[\"as:up:01FSY31QSXAA7X52GGCKV950X8\",\"gs:conn:01FS1XT2600G9PCFJBAP6DJF0K\",\"gs:up:host:01FS1XT26EQ911F1Q1DHDCQ9KB\",\"gs:uplink:01FSY31QKAYET9XMH4SEF80KK1\",\"ns:uplink:01FSY31QKC3A8RS7G7B5PPVF4J\",\"rpc:/ttn.lorawan.v3.GsNs/HandleUplink:01FSY31QKCS40S5W8KS0ZQ7YSH\",\"rpc:/ttn.lorawan.v3.NsAs/HandleUplink:01FSY31QSWJAVQC6D4TDY2RM00\"],\"received_at\":\"2022-01-21T10:31:24.734418685Z\",\"uplink_message\":{\"session_key_id\":\"AX2iJJqZ6Nh1nqnKWkjoYw==\",\"f_port\":85,\"f_cnt\":60976,\"frm_payload\":\"A2f4AARoUQYAAQ==\",\"decoded_payload\":{\"humidity\":40.5,\"temperature\":24.8},\"rx_metadata\":[{\"gateway_ids\":{\"gateway_id\":\"citysens-gw-ulm-l-karlstrasse\",\"eui\":\"FCC23DFFFE0B6FCD\"},\"time\":\"2021-10-30T00:07:49.927896Z\",\"timestamp\":234998236,\"rssi\":-113,\"channel_rssi\":-113,\"snr\":-2.2,\"location\":{\"latitude\":48.40400773012903,\"longitude\":9.985219710567447,\"source\":\"SOURCE_REGISTRY\"},\"uplink_token\":\"CisKKQodY2l0eXNlbnMtZ3ctdWxtLWwta2FybHN0cmFzc2USCPzCPf/+C2/NENyTh3AaDAj8lqqPBhC05fr4ASDghvK36/LWASoMCNWZ8osGEMCjuroD\",\"channel_index\":5},{\"gateway_ids\":{\"gateway_id\":\"iud-gw5-muenster\",\"eui\":\"0000024B080E0D75\"},\"time\":\"2022-01-21T10:31:24.497840Z\",\"timestamp\":3689836900,\"rssi\":-112,\"channel_rssi\":-112,\"snr\":-7.5,\"location\":{\"latitude\":48.39850492429838,\"longitude\":9.99166759962233,\"altitude\":50,\"source\":\"SOURCE_REGISTRY\"},\"uplink_token\":\"Ch4KHAoQaXVkLWd3NS1tdWVuc3RlchIIAAACSwgODXUQ5OK53w0aDAj8lqqPBhDrteL5ASCg3avbsbgRKgwI/JaqjwYQgN+x7QE=\",\"channel_index\":5},{\"gateway_ids\":{\"gateway_id\":\"packetbroker\"},\"packet_broker\":{\"message_id\":\"01FSY31QKDK2KR03DYK6NE9V3T\",\"forwarder_net_id\":\"000013\",\"forwarder_tenant_id\":\"ttnv2\",\"forwarder_cluster_id\":\"ttn-v2-eu-3\",\"forwarder_gateway_eui\":\"B827EBFFFE6DF69F\",\"forwarder_gateway_id\":\"eui-b827ebfffe6df69f\",\"home_network_net_id\":\"000013\",\"home_network_tenant_id\":\"ttn\",\"home_network_cluster_id\":\"eu1.cloud.thethings.network\"},\"time\":\"2022-01-21T10:31:24.507344Z\",\"rssi\":-28,\"channel_rssi\":-28,\"snr\":8.5,\"location\":{\"latitude\":48.40635703,\"longitude\":9.98099613},\"uplink_token\":\"eyJnIjoiWlhsS2FHSkhZMmxQYVVwQ1RWUkpORkl3VGs1VE1XTnBURU5LYkdKdFRXbFBhVXBDVFZSSk5GSXdUazVKYVhkcFlWaFphVTlwU20xU00xSnZVVlJvWmxaSFJsbFdWemxhVmpOWmVrbHBkMmxrUjBadVNXcHZhV0pHY0VaU1JURnRXbTV2ZUdGdFJucFpibWMxVlZNeFYwMUhiR2xrZVVvNUxrWllVREp4TFZKNFR6QnlTamxZTVZvd2RHeEhkSGN1VGtkR2FHOWxjbXRsYVc5eE1ESXdkaTR3VEhaelRtTkJTVEZKTlhSdU5WUXhWV1Z4ZWxwcGIwdE5Na2xuU1RKWmNXNWtVVXQzTmxsMFYyUlJWbWhFYkZSNFkzcFdlbkZpYlcxVmRYZEtlVlJaUzFaUGExVXhhMlY1ZUhaaGJTMWZjRlZ4V1ZweFZXRjNaR3hCTXpScU4zUllhbWh5UVhobE1sZExVeTFVUlZFeE0xTlJkVUU0WTNSV2R5MXFUek5oWms4d1pHOXdWMVUyTWpSQ1VHOVZjV2xYTm5ocU1YSk5NR2h4YTBnME5ERlRhRkZ5Ym1wMFoyaEdVUzVwVEdWc2NYRlhOVGxNZERKdWVYaHNNSFpwUTNCQiIsImEiOnsiZm5pZCI6IjAwMDAxMyIsImZ0aWQiOiJ0dG52MiIsImZjaWQiOiJ0dG4tdjItZXUtMyJ9fQ==\"},{\"gateway_ids\":{\"gateway_id\":\"iud-gw1-cortex-media\",\"eui\":\"0000024B080E1013\"},\"time\":\"2022-01-21T10:31:24.497842Z\",\"timestamp\":207638684,\"rssi\":-110,\"channel_rssi\":-110,\"snr\":-4,\"location\":{\"latitude\":48.404015275090615,\"longitude\":9.985219205855296,\"altitude\":20,\"source\":\"SOURCE_REGISTRY\"},\"uplink_token\":\"CiIKIAoUaXVkLWd3MS1jb3J0ZXgtbWVkaWESCAAAAksIDhATEJyhgWMaDAj8lqqPBhCv7pz8ASDgwuvBhfLWASoMCPyWqo8GENDuse0B\",\"channel_index\":5},{\"gateway_ids\":{\"gateway_id\":\"eui-fcc23dfffe0b89cb\",\"eui\":\"FCC23DFFFE0B89CB\"},\"timestamp\":1042367716,\"rssi\":-112,\"channel_rssi\":-112,\"snr\":-3.2,\"uplink_token\":\"CiIKIAoUZXVpLWZjYzIzZGZmZmUwYjg5Y2ISCPzCPf/+C4nLEOSJhfEDGgwI/JaqjwYQ0u2EhAIgoLXUj6uK1wE=\",\"channel_index\":5}],\"settings\":{\"data_rate\":{\"lora\":{\"bandwidth\":125000,\"spreading_factor\":8}},\"coding_rate\":\"4/5\",\"frequency\":\"867500000\",\"timestamp\":234998236,\"time\":\"2021-10-30T00:07:49.927896Z\"},\"received_at\":\"2022-01-21T10:31:24.524752957Z\",\"consumed_airtime\":\"0.113152s\",\"version_ids\":{\"brand_id\":\"milesight-iot\",\"model_id\":\"em300-th\",\"hardware_version\":\"V2.2\",\"firmware_version\":\"1.15\",\"band_id\":\"EU_863_870\"},\"network_ids\":{\"net_id\":\"000013\",\"tenant_id\":\"ttn\",\"cluster_id\":\"ttn-eu1\"}}}",
+        "payloadType": "str",
+        "x": 760,
+        "y": 440,
+        "wires": [
+            [
+                "44f8860b1574f832"
+            ]
+        ]
+    },
+    {
+        "id": "c6f7688d04c0562c",
+        "type": "file",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "filename": "/data/mioty_log.csv",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "utf8",
+        "x": 1510,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4e410dd1c82b6e8",
+        "type": "mqtt in",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "topic": "data",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "84947aef414dd231",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 370,
+        "y": 1040,
+        "wires": [
+            [
+                "839694051c48e13d"
+            ]
+        ]
+    },
+    {
+        "id": "e264633e098bad13",
+        "type": "debug",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1510,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "839694051c48e13d",
+        "type": "json",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 990,
+        "y": 1020,
+        "wires": [
+            [
+                "ed1a79aedddb87fa"
+            ]
+        ]
+    },
+    {
+        "id": "ed1a79aedddb87fa",
+        "type": "function",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "func": "return {\n    payload: msg.payload.data.map(data =>  {\n        \n        let sensor = 'unknown'\n        if (data.uid === 'M00124B001CAB4B9B000')\n            sensor = 'TI'\n        else if (data.uid === 'MA0412D2A0000046F000')\n            sensor = 'Lansen'\n            \n        return [\n            data.ts, \n            sensor, \n            data.frame, \n            data.rssi,\n            data.snr, \n            JSON.stringify(msg.payload)\n        ].join(';')\n    }).join('\\n')\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 1020,
+        "wires": [
+            [
+                "e264633e098bad13",
+                "c6f7688d04c0562c",
+                "c798b76490d47101"
+            ]
+        ]
+    },
+    {
+        "id": "55de669eb00c4b09",
+        "type": "inject",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"header\":{\"gw\":\"\",\"ts\":\"2022-01-21T10:43:03Z\"},\"data\":[{\"uid\":\"MA0412D2A0000046F000\",\"ts\":\"2022-01-21T10:42:58Z\",\"type\":\"MIOTY\",\"rssi\":-20.5,\"snr\":22.8,\"frame\":\"649C9D92727649C9F8\",\"uuid\":\"05406A3D492863A127AD942B201EB218\"}]}",
+        "payloadType": "str",
+        "x": 720,
+        "y": 840,
+        "wires": [
+            [
+                "839694051c48e13d"
+            ]
+        ]
+    },
+    {
+        "id": "7d85222bb2da0557",
+        "type": "mqtt out",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "topic": "lorawan",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "202e3fcf26f9fade",
+        "x": 1860,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "8ebb93b83e459ee5",
+        "type": "function",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "func": "\nreturn {payload: msg.payload.split(';').slice(0, 5).join(';')};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 680,
+        "wires": [
+            [
+                "7d85222bb2da0557"
+            ]
+        ]
+    },
+    {
+        "id": "c798b76490d47101",
+        "type": "function",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "func": "\nreturn {payload: msg.payload.split(';').slice(0, 5).join(';')};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 1080,
+        "wires": [
+            [
+                "ad595b0b376c7ef0"
+            ]
+        ]
+    },
+    {
+        "id": "ad595b0b376c7ef0",
+        "type": "mqtt out",
+        "z": "81fdf1b92e52ea8e",
+        "name": "",
+        "topic": "mioty",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "202e3fcf26f9fade",
+        "x": 1810,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "b0580af324c2134d",
+        "type": "influxdb in",
+        "z": "cc84aa81bc8e7783",
+        "influxdb": "b6055df9a47c5421",
+        "name": "",
+        "query": "from(bucket: \"Donaubad Neu\")\n  |> range(start: -200d, stop: -1d)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"comtac-lpn-di-297331-1119\")\n  |> filter(fn: (r) => r[\"_field\"] == \"di1_count\")\n  |> derivative( unit: 1h)\n  |> map(fn: (r) => ({\n      r with\n      _value: r._value * 0.1\n    })\n  )\n  |> aggregateWindow(every: 1h, fn: mean, createEmpty: false)\n  |> yield(name: \"abwasser\")",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "birkenstab",
+        "x": 480,
+        "y": 360,
+        "wires": [
+            [
+                "e7184b45e7a71279",
+                "efeaf9455eb2a4ab"
+            ]
+        ]
+    },
+    {
+        "id": "b3d307e7d839ced0",
+        "type": "debug",
+        "z": "cc84aa81bc8e7783",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a95f6310470cbee4",
+        "type": "inject",
+        "z": "cc84aa81bc8e7783",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 260,
+        "wires": [
+            [
+                "b0580af324c2134d"
+            ]
+        ]
+    },
+    {
+        "id": "9c33b42cb0f061d0",
+        "type": "ui_chart",
+        "z": "cc84aa81bc8e7783",
+        "name": "",
+        "group": "16313c985c402983",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1250,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e7184b45e7a71279",
+        "type": "function",
+        "z": "cc84aa81bc8e7783",
+        "name": "",
+        "func": "\nconst dataPoints = msg.payload.map(point => ({\n    x: new Date(point._time).getTime(),\n    y: point._value\n}))\n\nreturn {\n    payload: [{\n        series: ['A'],\n        data: [dataPoints]\n    }]\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 360,
+        "wires": [
+            [
+                "9c33b42cb0f061d0",
+                "b3d307e7d839ced0"
+            ]
+        ]
+    },
+    {
+        "id": "efeaf9455eb2a4ab",
+        "type": "function",
+        "z": "cc84aa81bc8e7783",
+        "name": "",
+        "func": "\nconst dataPoints = msg.payload.map(point => point._value)\n\nreturn {\n    payload: JSON.stringify({ data: dataPoints})\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 560,
+        "wires": [
+            [
+                "b016a32d6c24391e"
+            ]
+        ]
+    },
+    {
+        "id": "b016a32d6c24391e",
+        "type": "file",
+        "z": "cc84aa81bc8e7783",
+        "name": "",
+        "filename": "/data/abwasser.json",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 990,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    }
+]

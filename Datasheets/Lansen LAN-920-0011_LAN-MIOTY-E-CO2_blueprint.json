@@ -1,0 +1,64 @@
+{
+"version":"1.0.0",
+"typeEui":"A0412D0920001100",
+"meta":{
+	"name":"LAN-MIOTY-E-CO2",
+	"article":"LAN-920-0011",
+	"vendor":"Lansen",
+	"hardwareVersion":"1.0",
+	"firmwareVersion":"1.0"
+},
+"uplink":[{
+	"id":0,
+	"payload":[
+	{"name":"temp_1","component":"temperature"},
+	{"name":"humidity_1","component":"humidity"},
+	{"name":"co2_1","component":"co2"},
+	{"name":"temp_2","component":"temperature"},
+	{"name":"humidity_2","component":"humidity"},
+	{"name":"co2_2","component":"co2"},
+	{"name":"temp_3","component":"temperature"},
+	{"name":"humidity_3","component":"humidity"},
+	{"name":"co2_3","component":"co2"},
+	{"name":"batt","component":"battery"},
+	{"name":"co2_error","component":"bitData"},
+	{"name":"calibration_not_done","component":"bitData"}]
+	}],
+
+"component": {
+	"temperature": {
+		"size": 7,
+		"type": "uint",
+		"func": "$/2",
+		"unit": "°C",
+		"littleEndian": false
+	},
+	"humidity": {
+		"size": 7,
+		"type": "uint",
+		"func": "$",
+		"unit": "%",
+		"littleEndian": false
+	},
+	"co2": {
+		"size": 8,
+		"type": "uint",
+		"func": "$*20",
+		"unit": "ppm",
+		"littleEndian": false
+	},
+	"battery": {
+		"size": 4,
+		"type": "uint",
+		"func": "($+18)/10",
+		"unit": "V",
+		"littleEndian": false
+	},
+	"bitData": {
+		"size": 1,
+		"type": "bool",
+		"unit": "",
+		"littleEndian": false
+	}
+}
+}

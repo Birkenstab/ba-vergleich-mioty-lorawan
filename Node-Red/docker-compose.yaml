@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+    node-red:
+        ports:
+            - '1880:1880'
+        volumes:
+            - '.:/data'
+        container_name: nodered
+        image: nodered/node-red
